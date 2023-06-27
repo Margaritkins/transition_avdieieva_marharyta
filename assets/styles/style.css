@@ -1,23 +1,48 @@
 header{
-  /* text-align: center; */
-  font-size: 40px;
-  background-color: #eebfbf;
-  width: 200px;
+  font-size: 16px;
+  background-color: #153061;
+  width: 400px;
   text-align: center;
+  position: relative;
+  margin: auto;
 }
 
-header::before,
-header::after{
+h1::before,
+h1::after{
   content: "";
   display: block;
   width: 0;
   height: 5px; 
-  background-color: #d96363;
-  transition: width 1s linear;
-  margin-left: 0;
+  background-color: #d02020;
+  transition:  1s ease;
+
 }
 
-header::after{
+h1::after{
+  position: absolute;
+  left: 100%;
+  right: 0;
+}
+
+h1:hover::after{
+  width: 100%;
+  left: 0;
+}
+
+h1:hover::before{
+  width: 100%;
+  left: 0;
+}
+
+
+
+
+
+
+
+
+
+/* header:first-child:after{
   margin-left: auto;
 }
 
@@ -27,4 +52,4 @@ header:hover::before{
 
 header:hover::after{
   width: 100%;
-}
+} */
